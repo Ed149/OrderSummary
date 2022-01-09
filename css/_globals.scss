@@ -18,7 +18,7 @@ body{
     &-blue{
         background-color: $brightBlue;
         color:$white;
-        box-shadow: 1px 1rem 5px $veryPaleBlue;
+        box-shadow: 0.0625rem 1rem 0.0625rem $veryPaleBlue;
         margin-bottom: .5rem;
         transition: background-color 200ms ease-in;
         &:hover{
@@ -75,19 +75,19 @@ body{
 
 .card{
     background-color: $white;
-    width: 330px;
-    border-radius: 22px;
+    width: 20.625rem;
+    border-radius: 1.375rem;
     overflow: hidden;
     @include media-up(md){
-        width:400px;
+        width:25rem;
     }
     &__image{
         background-image: url('../img/illustration-hero.svg');
         background-repeat: no-repeat;
-        height: 180px;
+        height: 11.25rem;
         // background-size: 100% 100%;
 
-        background-size: 100% 180px;
+        background-size: 100% 11.25rem;
         background-position: center center;
     }
     &__content{
@@ -99,7 +99,7 @@ body{
     }
     &__paragraph{
         font-size: .96rem;
-        line-height: 28px;
+        line-height: 1.75rem;
         margin-bottom: 1.3rem;
         color:$desaturatedBlue;
     }
@@ -107,7 +107,7 @@ body{
     &__plan{
         display: flex;
         background-color:$veryPaleBlue;
-        border-radius:10px;
+        border-radius:0.625rem;
         padding: .8rem .6rem;
         justify-content: space-around;
         align-items: center;
