@@ -67,6 +67,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
     z-index: 5;
    
@@ -148,6 +149,10 @@ body{
         }
     }
 
+}
+footer{
+    font-size: .8rem;
+    margin-top: 1rem;
 }
 
 
