@@ -1,0 +1,145 @@
+html{
+    box-sizing: border-box;
+    font-size:16px;
+}*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: $paleBlue;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: url('../img/pattern-background-mobile.svg');
+        position: absolute;
+        z-index:1;
+        @include media-up(sm){
+            content: url('../img/pattern-background-desktop.svg');
+    }
+    }
+    
+}
+.btn{
+    padding:1rem;
+    border-radius:10px;
+    &-blue{
+        background-color: $brightBlue;
+        color:$white;
+        box-shadow: 1px 1rem 5px $veryPaleBlue;
+        margin-bottom: .5rem;
+        transition: background-color 200ms ease-in;
+        &:hover{
+            background-color: $desaturatedBlue;
+        }
+    }
+    &-cancel{
+        color:$desaturatedBlue;
+        transition: color 200ms ease-in;
+        &:hover{
+            color:$darkBlue;
+        }
+    }
+}
+
+.fw-500{
+    font-weight: 500;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-900{
+    font-weight: 900;
+}
+.center{
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.card{
+    background-color: $white;
+    width: 330px;
+    border-radius: 22px;
+    overflow: hidden;
+    @include media-up(md){
+        width:400px;
+    }
+    &__image{
+        background-image: url('../img/illustration-hero.svg');
+        background-repeat: no-repeat;
+        height: 180px;
+        // background-size: 100% 100%;
+
+        background-size: 100% 180px;
+        background-position: center center;
+    }
+    &__content{
+        padding:2rem;
+    }
+    &__heading{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    &__paragraph{
+        font-size: .96rem;
+        line-height: 28px;
+        margin-bottom: 1.3rem;
+        color:$desaturatedBlue;
+    }
+
+    &__plan{
+        display: flex;
+        background-color:$veryPaleBlue;
+        border-radius:10px;
+        padding: .8rem .6rem;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom:1.4rem;
+        &_image{
+            @include media-up(md){
+                    margin-left: -1rem;
+                }
+        }
+        &_info{
+            @include media-up(md){
+                    margin-left: -2rem;
+                }
+            h2{
+                font-size:1rem;
+            }
+            p{
+                font-size: .8rem;
+                color:$desaturatedBlue;
+                
+            }
+        }
+        &_cta{
+            a{
+                transition: color 200ms ease-in;
+                &:hover{
+                    color:$desaturatedBlue;
+                }
+            }
+        }
+    }
+    &__cta{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        a{
+            text-decoration: none;
+           
+        }
+    }
+
+}
+
+
