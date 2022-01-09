@@ -10,14 +10,15 @@ body{
     font-family: 'Red Hat Display', sans-serif;
     background-color: $paleBlue;
     position: relative;
-    overflow: hidden;
     &::before{
         content: url('../img/pattern-background-mobile.svg');
         position: absolute;
         z-index:1;
-        @include media-up(sm){
+        @include media-up(md){
             content: url('../img/pattern-background-desktop.svg');
-    }
+            position:absolute;
+            z-index: 1;
+        }
     }
     
 }

@@ -15,7 +15,6 @@ body {
   font-family: 'Red Hat Display', sans-serif;
   background-color: #e0e8ff;
   position: relative;
-  overflow: hidden;
 }
 
 body::before {
@@ -24,9 +23,11 @@ body::before {
   z-index: 1;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 768px) {
   body::before {
     content: url("../img/pattern-background-desktop.svg");
+    position: absolute;
+    z-index: 1;
   }
 }
 
